@@ -1,13 +1,17 @@
+import { PageHeading } from "@/components/site/PageHeading";
 import { company } from "@/lib/site/constants";
 
 export function AboutPageContent() {
   return (
     <>
+      <PageHeading
+        title="About"
+        description="Turning gardens around with dependable landscaping and lawn care."
+      />
+
       <section className="section about-intro">
         <div className="shell about-grid">
           <div className="about-copy">
-            <h1>ABOUT</h1>
-            <hr />
             <h2>Turning Gardens Around</h2>
             <div className="stack">
               <p>
