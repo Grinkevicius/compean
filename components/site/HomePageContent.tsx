@@ -1,5 +1,4 @@
 import { PageHero } from "@/components/site/PageHero";
-import { ServiceGrid } from "@/components/site/ServiceGrid";
 import { company } from "@/lib/site/constants";
 
 export function HomePageContent() {
@@ -48,16 +47,16 @@ export function HomePageContent() {
               gardens to hardscape features, our team can help bring your
               outdoor vision to life.
             </p>
+            <p>
+              View the full list of lawn care, cleanup, masonry, washing,
+              aeration, and fertilizing options on the services page.
+            </p>
           </div>
-        </div>
-      </section>
-
-      <section className="section section--muted">
-        <div className="shell">
-          <div className="section__heading centered">
-            <h2>Our Services</h2>
+          <div className="actions actions--center">
+            <a className="button button--primary" href="/products-services">
+              Our Services
+            </a>
           </div>
-          <ServiceGrid linked />
         </div>
       </section>
     </>
