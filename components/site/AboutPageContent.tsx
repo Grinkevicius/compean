@@ -3,31 +3,33 @@ import { company } from "@/lib/site/constants";
 export function AboutPageContent() {
   return (
     <>
-      <section className="section page-title">
-        <div className="shell centered narrow">
-          <h1>ABOUT</h1>
-          <hr />
-        </div>
-      </section>
-
-      <section className="section section--compact">
-        <div className="shell centered narrow">
-          <h2>Turning Gardens Around</h2>
-          <div className="stack">
-            <p>
-              Compean Landscaping and Lawn Care transforms yards with honest,
-              reliable service. We care for the beauty of outdoor spaces,
-              gardens, and homes with practical lawn care, cleanup, and
-              landscaping work.
-            </p>
+      <section className="section about-intro">
+        <div className="shell about-grid">
+          <div className="about-copy">
+            <h1>ABOUT</h1>
+            <hr />
+            <h2>Turning Gardens Around</h2>
+            <div className="stack">
+              <p>
+                Compean Landscaping and Lawn Care transforms yards with honest,
+                reliable service. Our work is built around the beauty of
+                outdoors, gardens, and people&apos;s homes across the local
+                communities we serve.
+              </p>
+              <p>
+                You can count on our services to be dependable, practical, and
+                focused on making your outdoor spaces feel cared for.
+              </p>
+            </div>
           </div>
+          <div className="about-photo" aria-label="Flower garden path" />
         </div>
       </section>
 
-      <section className="section section--compact">
+      <section className="section section--muted service-area-section">
         <div className="shell centered narrow">
-          <h3>The Areas We Service Are</h3>
-          <h2>{company.serviceAreas.join(", ")}</h2>
+          <h3>THE AREAS WE SERVICE ARE</h3>
+          <p>{company.serviceAreas.join(", ")}</p>
           <a className="button button--primary" href="/contact">
             Contact Us
           </a>

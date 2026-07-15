@@ -2,11 +2,12 @@ import { services } from "@/lib/site/constants";
 
 type ServiceGridProps = {
   linked?: boolean;
+  variant?: "default" | "circle";
 };
 
-export function ServiceGrid({ linked = false }: ServiceGridProps) {
+export function ServiceGrid({ linked = false, variant = "default" }: ServiceGridProps) {
   return (
-    <div className="service-grid">
+    <div className={`service-grid service-grid--${variant}`}>
       {services.map((service, index) => {
         const content = (
           <>
