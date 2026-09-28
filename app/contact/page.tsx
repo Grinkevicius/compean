@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import { ContactPageContent } from "@/components/site/ContactPageContent";
 
 export const metadata: Metadata = {
-  title: "Contact | Compean Landscaping and Lawn Care",
+  title: "Contact",
   description:
-    "Contact Compean Landscaping and Lawn Care to schedule lawn care or landscaping services.",
+    "Contact Compean Maintenance for a free estimate on lawn care, landscaping, or property maintenance.",
 };
 
 export default function Page() {

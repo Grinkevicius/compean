@@ -1,64 +1,59 @@
-import { PageHero } from "@/components/site/PageHero";
-import { company } from "@/lib/site/constants";
+import Link from "next/link";
+import { BeforeAfter } from "@/components/site/BeforeAfter";
+import { CtaBand } from "@/components/site/CtaBand";
+import { PageHeading } from "@/components/site/PageHeading";
+import { SectionEyebrow } from "@/components/site/SectionEyebrow";
+import { ServiceCards } from "@/components/site/ServiceCards";
+import { images } from "@/lib/site/constants";
 
 export function HomePageContent() {
   return (
     <>
-      <PageHero
-        eyebrow=""
-        title={`Welcome to ${company.name}`}
-        description="Our Customers Are Number One"
+      <PageHeading
+        large
+        eyebrow="Landscaping & Property Care"
+        title="A property you’re proud to come home to."
+        description="Thoughtful landscaping. Reliable maintenance. Beautiful outdoor spaces."
+        image={images.hero}
+        imageAlt="Landscaped home with palm trees, trimmed hedges, and a green lawn"
         actions={
           <>
-            <a className="button button--primary" href="/products-services">
-              Our Services
-            </a>
-            <a className="button button--light" href="/contact">
-              Contact Us
-            </a>
+            <Link className="button button--red" href="/contact">
+              Get a Free Estimate
+            </Link>
+            <Link className="text-link" href="/services">
+              Explore Our Services <span aria-hidden="true">→</span>
+            </Link>
           </>
         }
       />
 
-      <section className="section section--intro">
-        <div className="shell image-split">
-          <div className="feature-photo" />
-          <div className="stack">
-            <h2>Providing Reliable Landscaping Services</h2>
-            <p>
-              Turn to Compean Landscaping and Lawn Care for your yard work
-              needs. Our lawn and landscaping services help turn gardens,
-              lawns, and outdoor areas into clean, welcoming spaces.
-            </p>
-            <a className="button button--primary" href="/contact">
-              Contact Us
-            </a>
-          </div>
+      <section className="section">
+        <div className="shell">
+          <SectionEyebrow>Our Services</SectionEyebrow>
+          <h2 className="section-title">Your yard. Our attention to detail.</h2>
+          <ServiceCards />
         </div>
       </section>
 
-      <section className="section">
-        <div className="shell centered narrow">
-          <h2>Create Your Dream Landscape with Compean</h2>
-          <div className="stack">
+      <section className="section section--muted">
+        <div className="shell">
+          <div className="section-split-heading">
+            <div>
+              <SectionEyebrow>Recent Work</SectionEyebrow>
+              <h2 className="section-title">See the difference.</h2>
+            </div>
             <p>
-              We provide landscape design, installation, lawn care, cleanup,
-              and outdoor improvements for homes and businesses. From lush
-              gardens to hardscape features, our team can help bring your
-              outdoor vision to life.
-            </p>
-            <p>
-              View the full list of lawn care, cleanup, masonry, washing,
-              aeration, and fertilizing options on the services page.
+              Thoughtful care. Lasting results.
+              <br />
+              The same home. A whole new look.
             </p>
           </div>
-          <div className="actions actions--center">
-            <a className="button button--primary" href="/products-services">
-              Our Services
-            </a>
-          </div>
+          <BeforeAfter />
         </div>
       </section>
+
+      <CtaBand />
     </>
   );
 }

@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import { AboutPageContent } from "@/components/site/AboutPageContent";
 
 export const metadata: Metadata = {
-  title: "About | Compean Landscaping and Lawn Care",
+  title: "About",
   description:
-    "Learn about Compean's reliable lawn care and landscaping services for Winston-Salem, Pfafftown, and Walkertown.",
+    "Learn about Compean Maintenance and our reliable landscaping and lawn care for Winston-Salem, Pfafftown, and Walkertown.",
 };
 
 export default function Page() {

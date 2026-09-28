@@ -1,28 +1,22 @@
 import type { Metadata } from "next";
-import { Open_Sans, Playfair_Display } from "next/font/google";
+import { Plus_Jakarta_Sans } from "next/font/google";
 import { SiteFooter } from "@/components/site/SiteFooter";
 import { SiteHeader } from "@/components/site/SiteHeader";
 import "./globals.css";
 
-const playfair = Playfair_Display({
-  variable: "--font-playfair",
+const jakarta = Plus_Jakarta_Sans({
+  variable: "--font-jakarta",
   subsets: ["latin"],
-  weight: ["400", "700", "900"],
-});
-
-const openSans = Open_Sans({
-  variable: "--font-open-sans",
-  subsets: ["latin"],
-  weight: ["300", "400", "600", "700"],
+  weight: ["400", "500", "600", "700", "800"],
 });
 
 export const metadata: Metadata = {
   title: {
-    default: "Compean Landscaping and Lawn Care",
-    template: "%s",
+    default: "Compean Maintenance | Landscaping & Property Care",
+    template: "%s | Compean Maintenance",
   },
   description:
-    "Reliable lawn care and landscaping services for Winston-Salem, Pfafftown, and Walkertown.",
+    "Thoughtful landscaping, reliable lawn care, and property maintenance for Winston-Salem, Pfafftown, and Walkertown.",
 };
 
 export default function RootLayout({
@@ -31,10 +25,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className={`${playfair.variable} ${openSans.variable} h-full antialiased`}
-    >
+    <html lang="en" className={`${jakarta.variable} h-full antialiased`}>
       <body>
         <SiteHeader />
         <main>{children}</main>

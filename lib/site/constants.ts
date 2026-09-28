@@ -1,6 +1,5 @@
 export const company = {
-  name: "Compean Landscaping and Lawn Care",
-  displayName: "Compean Landscaping\nand Lawn Care",
+  name: "Compean Maintenance",
   shortName: "Compean",
   phone: "(336) 416-3080",
   email: "hello@compeanlawncare.com",
@@ -9,41 +8,50 @@ export const company = {
 
 export const navItems = [
   { label: "Home", href: "/" },
+  { label: "Services", href: "/services" },
   { label: "About", href: "/about" },
-  { label: "Products/Services", href: "/products-services" },
   { label: "Contact", href: "/contact" },
 ];
 
+export const images = {
+  logo: "/images/logo.png",
+  hero: "/images/hero-home.jpg",
+  before: "/images/before.jpg",
+  after: "/images/after.jpg",
+  about: "/images/about.jpg",
+  servicesHero: "/images/services-hero.jpg",
+};
+
 export const services = [
   {
-    title: "Grass Cutting",
+    slug: "lawn-care",
+    title: "Lawn Care",
+    summary: "Healthy, green lawns that make a difference.",
     description:
-      "Routine mowing, edging, and trimming that keeps your lawn clean and even through the growing season.",
+      "Routine mowing, edging, and trimming plus the soil and nutrient care that keeps turf thick, even, and green through every season.",
+    image: "/images/service-lawn-care.jpg",
+    imageAlt: "Lawn mower cutting thick green grass",
+    includes: ["Grass cutting", "Edging & trimming", "Aeration", "Fertilizing"],
   },
   {
-    title: "Masonry Work",
+    slug: "landscaping",
+    title: "Landscaping",
+    summary: "Beautiful, functional outdoor spaces.",
     description:
-      "Practical outdoor masonry for retaining walls, fire pits, borders, walkways, and durable yard features.",
+      "Planting beds, borders, walkways, and durable masonry features designed to make your property look finished and inviting.",
+    image: "/images/service-landscaping.jpg",
+    imageAlt: "Landscaped front yard with shrubs and a stone path",
+    includes: ["Bed design & planting", "Mulch & borders", "Masonry work", "Walkways & retaining walls"],
   },
   {
-    title: "Yard Cleanup",
+    slug: "property-maintenance",
+    title: "Property Maintenance",
+    summary: "A clean, well-kept property year-round.",
     description:
-      "Leaf removal, brush clearing, branch pickup, and seasonal cleanup for yards that need a reset.",
-  },
-  {
-    title: "Pressure Washing",
-    description:
-      "Driveways, patios, walkways, and exterior surfaces cleaned so the whole property feels cared for.",
-  },
-  {
-    title: "Aeration",
-    description:
-      "Soil aeration that helps water, air, and nutrients reach the roots for a stronger lawn.",
-  },
-  {
-    title: "Fertilizing",
-    description:
-      "Targeted lawn feeding to support healthier color, fuller growth, and better seasonal recovery.",
+      "Seasonal cleanups, leaf and brush removal, and pressure washing so driveways, patios, and yards always look cared for.",
+    image: "/images/service-maintenance.jpg",
+    imageAlt: "Worker clearing leaves with a leaf blower",
+    includes: ["Yard cleanup", "Leaf & brush removal", "Pressure washing", "Seasonal upkeep"],
   },
 ];
 
